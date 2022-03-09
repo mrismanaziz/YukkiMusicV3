@@ -58,12 +58,12 @@ async def ping_com(client, message: Message, _):
             for x in got:
                 j += 1
                 if j == 1:
-                    msg += f'Currently Playing:\n\n🏷Title: {x["title"]}\nDur: {x["dur"]}\nBy: {x["by"]}\n\n'
+                    msg += f'**Currently Playing:**\n\n🏷 **Title:** `{x["title"]}`\n⏱ **Duration:** {x["dur"]}\n🎧 **Request By:** {x["by"]}\n\n'
                 elif j == 2:
-                    msg += f'Queued:\n\n🏷Title: {x["title"]}\nDur: {x["dur"]}\nBy: {x["by"]}\n\n'
+                    msg += f'**Queued:**\n\n🏷 **Title:** `{x["title"]}`\n⏱ **Duration:** {x["dur"]}\n🎧 **Request By:** {x["by"]}\n\n'
                 else:
                     msg += (
-                        f'🏷Title: {x["title"]}\nDur: {x["dur"]}\nBy: {x["by"]}\n\n'
+                        f'🏷 **Title:** `{x["title"]}`\n⏱ **Duration:** {x["dur"]}\n🎧 **Request By:** {x["by"]}\n\n'
                     )
             if "Queued" in msg:
                 link = await Yukkibin(msg)
