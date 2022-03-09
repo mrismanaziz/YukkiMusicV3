@@ -26,12 +26,12 @@ CHANNELPLAY_COMMAND : ["channelplay", "चैनलप्ले"]
 STREAM_COMMAND : ["stream", "धारा", "cstream"]
 
 #Playlists Command
-PLAYLIST_COMMAND : ["playlist", "प्लेलिस्ट"]
+PLAYLIST_COMMAND : ["playlistuser", "प्लेलिस्ट"]
 DELETEPLAYLIST_COMMAND : ["deleteplaylist", "प्लेलिस्ट-हटाएं"]
 
 
 # Tools
-QUEUE_COMMAND : ["queue", "पंक्ति", "cqueue"]
+QUEUE_COMMAND : ["queue", "playlist", "पंक्ति", "cqueue"]
 SONG_COMMAND : ["song", "video", "गीत", "वीडियो"]
 LYRICS_COMMAND : ["lyrics", "बोल"]
 
