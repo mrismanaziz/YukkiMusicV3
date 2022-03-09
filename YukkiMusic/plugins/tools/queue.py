@@ -74,6 +74,10 @@ async def ping_com(client, message: Message, _):
                     return await send.edit_text(msg)
                 if "🏷" in car:
                     car = car.replace("🏷", "")
+                if "⏱" in car:
+                    car = car.replace("⏱", "")
+                if "🎧" in car:
+                    car = car.replace("🎧", "")
                 carbon = await Carbon.generate(
                     car, randint(100, 10000000)
                 )
