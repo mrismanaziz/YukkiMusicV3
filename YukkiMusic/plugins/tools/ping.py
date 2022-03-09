@@ -31,13 +31,9 @@ PING_COMMAND = get_command("PING_COMMAND")
 @language
 async def ping_com(client, message: Message, _):
     start = datetime.now()
-    response = await message.reply_photo(
-        photo=PING_IMG_URL,
-        caption=_["ping_1"],
-    )
     UP, CPU, RAM, DISK = await bot_sys_stats()
     end = datetime.now()
     resp = (end - start).microseconds / 1000
-    await response.edit_text(
+    await message.reply(
         _["ping_2"].format(resp, MUSIC_BOT_NAME, UP, RAM, CPU, DISK)
     )
