@@ -11,12 +11,12 @@
 # Commands in Every Language
 
 # Bot Commands
-PING_COMMAND : ["ping", "पिंग"]
+PING_COMMAND : ["mping", "पिंग"]
 START_COMMAND : ["start", "स्टार्ट"]
-HELP_COMMAND : ["help", "हेल्प"]
+HELP_COMMAND : ["help", "mhelp", "हेल्प"]
 SETTINGS_COMMAND : ["settings", "setting", "सेटिंग्स", "सेटिंग"]
 RELOAD_COMMAND : ["admincache", "reload", "व्यवस्थापक कैश", "पुनः लोड करें"]
-STATS_COMMAND : ["stats", "आँकड़े"]
+STATS_COMMAND : ["mstats", "आँकड़े"]
 LANGUAGE_COMMAND : ["lang", "language"]
 
 # Play Commands
@@ -26,12 +26,12 @@ CHANNELPLAY_COMMAND : ["channelplay", "चैनलप्ले"]
 STREAM_COMMAND : ["stream", "धारा", "cstream"]
 
 #Playlists Command
-PLAYLIST_COMMAND : ["playlist", "प्लेलिस्ट"]
+PLAYLIST_COMMAND : ["playlistuser", "प्लेलिस्ट"]
 DELETEPLAYLIST_COMMAND : ["deleteplaylist", "प्लेलिस्ट-हटाएं"]
 
 
 # Tools
-QUEUE_COMMAND : ["queue", "पंक्ति", "cqueue"]
+QUEUE_COMMAND : ["queue", "playlist", "पंक्ति", "cqueue"]
 SONG_COMMAND : ["song", "video", "गीत", "वीडियो"]
 LYRICS_COMMAND : ["lyrics", "बोल"]
 
@@ -58,7 +58,7 @@ DELSUDO_COMMAND : ["delsudo", "देलसूड़ो"]
 SUDOUSERS_COMMAND : ["sudolist", "सुडोलिस्ट"]
 
 #Broadcast 
-BROADCAST_COMMAND : ["broadcast", "ब्रॉडकास्ट"]
+BROADCAST_COMMAND : ["mbroadcast", "ब्रॉडकास्ट"]
 
 #Blacklist chat
 BLACKLISTCHAT_COMMAND : ["blacklistchat", "ब्लैकलिस्टचात"]

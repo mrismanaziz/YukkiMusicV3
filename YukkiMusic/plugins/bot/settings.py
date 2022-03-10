@@ -66,10 +66,6 @@ async def settings_mar(client, message: Message, _):
 )
 @languageCB
 async def settings_cb(client, CallbackQuery, _):
-    try:
-        await CallbackQuery.answer(_["set_cb_8"])
-    except:
-        pass
     buttons = setting_markup(_)
     return await CallbackQuery.edit_message_text(
         _["setting_1"].format(
@@ -87,10 +83,6 @@ async def settings_cb(client, CallbackQuery, _):
 async def settings_back_markup(
     client, CallbackQuery: CallbackQuery, _
 ):
-    try:
-        await CallbackQuery.answer()
-    except:
-        pass
     if CallbackQuery.message.chat.type == "private":
         try:
             await app.resolve_peer(OWNER_ID[0])
@@ -186,10 +178,6 @@ async def without_Admin_rights(client, CallbackQuery, _):
         except:
             return
     if command == "CM":
-        try:
-            await CallbackQuery.answer(_["set_cb_5"], show_alert=True)
-        except:
-            pass
         sta = None
         cle = None
         if await is_cleanmode_on(CallbackQuery.message.chat.id):
@@ -198,24 +186,12 @@ async def without_Admin_rights(client, CallbackQuery, _):
             sta = True
         buttons = cleanmode_settings_markup(_, status=cle, dels=sta)
     if command == "AQ":
-        try:
-            await CallbackQuery.answer(_["set_cb_1"], show_alert=True)
-        except:
-            pass
         aud = await get_aud_bit_name(CallbackQuery.message.chat.id)
         buttons = await gen_buttons_aud(_, aud)
     if command == "VQ":
-        try:
-            await CallbackQuery.answer(_["set_cb_2"], show_alert=True)
-        except:
-            pass
         aud = await get_vid_bit_name(CallbackQuery.message.chat.id)
         buttons = await gen_buttons_vid(_, aud)
     if command == "PM":
-        try:
-            await CallbackQuery.answer(_["set_cb_4"], show_alert=True)
-        except:
-            pass
         playmode = await get_playmode(CallbackQuery.message.chat.id)
         if playmode == "Direct":
             Direct = True
@@ -233,10 +209,6 @@ async def without_Admin_rights(client, CallbackQuery, _):
             Playtype = True
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
     if command == "AU":
-        try:
-            await CallbackQuery.answer(_["set_cb_3"], show_alert=True)
-        except:
-            pass
         is_non_admin = await is_nonadmin_chat(
             CallbackQuery.message.chat.id
         )
@@ -262,10 +234,6 @@ async def without_Admin_rights(client, CallbackQuery, _):
 @ActualAdminCB
 async def aud_vid_cb(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)
-    try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
-    except:
-        pass
     if command == "LQA":
         await save_audio_bitrate(CallbackQuery.message.chat.id, "Low")
         buttons = audio_quality_markup(_, low=True)
@@ -335,10 +303,6 @@ async def playmode_ans(client, CallbackQuery, _):
                 )
             except:
                 return
-        try:
-            await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
-        except:
-            pass
         chatmode = await get_chatmode(CallbackQuery.message.chat.id)
         if chatmode == "Group":
             await set_chatmode(
@@ -361,10 +325,6 @@ async def playmode_ans(client, CallbackQuery, _):
             Playtype = True
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
     if command == "MODECHANGE":
-        try:
-            await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
-        except:
-            pass
         playmode = await get_playmode(CallbackQuery.message.chat.id)
         if playmode == "Direct":
             await set_playmode(
@@ -388,10 +348,6 @@ async def playmode_ans(client, CallbackQuery, _):
             Playtype = True
         buttons = playmode_users_markup(_, Direct, Group, Playtype)
     if command == "PLAYTYPECHANGE":
-        try:
-            await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
-        except:
-            pass
         playty = await get_playtype(CallbackQuery.message.chat.id)
         if playty == "Everyone":
             await set_playtype(CallbackQuery.message.chat.id, "Admin")
@@ -484,10 +440,6 @@ async def authusers_mar(client, CallbackQuery, _):
                 )
             except MessageNotModified:
                 return
-    try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
-    except:
-        pass
     if command == "AUTH":
         is_non_admin = await is_nonadmin_chat(
             CallbackQuery.message.chat.id
@@ -516,10 +468,6 @@ async def authusers_mar(client, CallbackQuery, _):
 @ActualAdminCB
 async def cleanmode_mark(client, CallbackQuery, _):
     command = CallbackQuery.matches[0].group(1)
-    try:
-        await CallbackQuery.answer(_["set_cb_6"], show_alert=True)
-    except:
-        pass
     if command == "CLEANMODE":
         sta = None
         if await is_commanddelete_on(CallbackQuery.message.chat.id):
