@@ -89,7 +89,6 @@ async def start_comm(client, message: Message, _):
                     msg += f"🔗[Telegram Files and Audios](https://t.me/telegram) ** played {count} times**\n\n"
                 else:
                     msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
-            await m.delete()
             msg = _["ustats_2"].format(tot, tota, tracks) + msg
             await message.reply_photo(photo=thumbnail, caption=msg)
             return
@@ -156,7 +155,6 @@ async def start_comm(client, message: Message, _):
                     ],
                 ]
             )
-            await m.delete()
             await app.send_photo(
                 message.chat.id,
                 photo=thumbnail,
@@ -177,26 +175,6 @@ async def start_comm(client, message: Message, _):
             OWNER = OWNER_ID[0]
         except:
             OWNER = None
-        out = private_panel(_, app.username, OWNER)
-        if config.START_IMG_URL:
-            try:
-                await message.reply_photo(
-                    photo=config.START_IMG_URL,
-                    caption=_["start_2"].format(
-                        config.MUSIC_BOT_NAME
-                    ),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-            except:
-                await message.reply_text(
-                    _["start_2"].format(config.MUSIC_BOT_NAME),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-        else:
-            await message.reply_text(
-                _["start_2"].format(config.MUSIC_BOT_NAME),
-                reply_markup=InlineKeyboardMarkup(out),
-            )
         if await is_on_off(config.LOG):
             sender_id = message.from_user.id
             sender_name = message.from_user.first_name
@@ -204,6 +182,23 @@ async def start_comm(client, message: Message, _):
                 config.LOG_GROUP_ID,
                 f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
             )
+
+
+@app.on_message(
+    filters.command(get_command("START_COMMAND"))
+    & filters.group
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@language
+async def testbot(client, message: Message, _):
+    out = start_pannel(_)
+    return await message.reply_text(
+        _["start_1"].format(
+            message.chat.title, config.MUSIC_BOT_NAME
+        ),
+        reply_markup=InlineKeyboardMarkup(out),
+    )
 
 
 welcome_group = 2
