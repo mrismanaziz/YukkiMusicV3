@@ -76,16 +76,14 @@ async def set_cmode(chat_id: int, mode: int):
 
 # PLAY MODE WHETHER GROUP OR CHANNEL
 async def get_chatmode(chat_id: int) -> str:
-    mode = chatmode.get(chat_id)
-    if not mode:
-        mode = await chatmodedb.find_one({"chat_id": chat_id})
-        if not mode:
-            chatmode[chat_id] = "Group"
-            return "Group"
-        chatmode[chat_id] = mode["mode"]
-        return mode["mode"]
-    else:
+    if mode := chatmode.get(chat_id):
         return mode
+    mode = await chatmodedb.find_one({"chat_id": chat_id})
+    if not mode:
+        chatmode[chat_id] = "Group"
+        return "Group"
+    chatmode[chat_id] = mode["mode"]
+    return mode["mode"]
 
 
 async def set_chatmode(chat_id: int, mode: str):
@@ -193,10 +191,7 @@ async def get_active_chats() -> list:
 
 
 async def is_active_chat(chat_id: int) -> bool:
-    if chat_id not in active:
-        return False
-    else:
-        return True
+    return chat_id in active
 
 
 async def add_active_chat(chat_id: int):
@@ -215,10 +210,7 @@ async def get_active_video_chats() -> list:
 
 
 async def is_active_video_chat(chat_id: int) -> bool:
-    if chat_id not in activevideo:
-        return False
-    else:
-        return True
+    return chat_id in activevideo
 
 
 async def add_active_video_chat(chat_id: int):
@@ -233,10 +225,7 @@ async def remove_active_video_chat(chat_id: int):
 
 # Delete command mode
 async def is_commanddelete_on(chat_id: int) -> bool:
-    if chat_id not in command:
-        return True
-    else:
-        return False
+    return chat_id not in command
 
 
 async def commanddelete_off(chat_id: int):
@@ -253,10 +242,7 @@ async def commanddelete_on(chat_id: int):
 
 # Clean Mode
 async def is_cleanmode_on(chat_id: int) -> bool:
-    if chat_id not in cleanmode:
-        return True
-    else:
-        return False
+    return chat_id not in cleanmode
 
 
 async def cleanmode_off(chat_id: int):
@@ -309,8 +295,8 @@ async def remove_nonadmin_chat(chat_id: int):
 
 # Video Limit
 async def is_video_allowed(chat_idd) -> str:
-    chat_id = 123456
     if not vlimit:
+        chat_id = 123456
         dblimit = await videodb.find_one({"chat_id": chat_id})
         if not dblimit:
             vlimit.clear()
@@ -325,9 +311,8 @@ async def is_video_allowed(chat_idd) -> str:
     if limit == 0:
         return False
     count = len(await get_active_video_chats())
-    if int(count) == int(limit):
-        if not await is_active_video_chat(chat_idd):
-            return False
+    if count == int(limit) and not await is_active_video_chat(chat_idd):
+        return False
     return True
 
 
@@ -368,10 +353,7 @@ async def get_aud_bit_name(chat_id: int) -> str:
 async def get_vid_bit_name(chat_id: int) -> str:
     mode = video.get(chat_id)
     if not mode:
-        if PRIVATE_BOT_MODE == str(True):
-            return "High"
-        else:
-            return "Medium"
+        return "High" if PRIVATE_BOT_MODE == str(True) else "Medium"
     return mode
 
 

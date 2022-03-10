@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardButton
 
 
 def track_markup(_, videoid, user_id, channel):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
@@ -29,11 +29,10 @@ def track_markup(_, videoid, user_id, channel):
             )
         ],
     ]
-    return buttons
 
 
 def stream_markup(_, videoid):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"], switch_inline_query_current_chat=""
@@ -43,11 +42,10 @@ def stream_markup(_, videoid):
             )
         ],
     ]
-    return buttons
 
 
 def telegram_markup(_):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"], switch_inline_query_current_chat=""
@@ -57,11 +55,10 @@ def telegram_markup(_):
             ),
         ],
     ]
-    return buttons
 
 
 def playlist_markup(_, videoid, user_id, ptype, channel):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
@@ -79,11 +76,10 @@ def playlist_markup(_, videoid, user_id, ptype, channel):
             ),
         ],
     ]
-    return buttons
 
 
 def livestream_markup(_, videoid, user_id, mode, channel):
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text=_["P_B_3"],
@@ -95,12 +91,11 @@ def livestream_markup(_, videoid, user_id, mode, channel):
             ),
         ],
     ]
-    return buttons
 
 
 def slider_markup(_, videoid, user_id, query, query_type, channel):
     query = f"{query[:20]}"
-    buttons = [
+    return [
         [
             InlineKeyboardButton(
                 text=_["P_B_1"],
@@ -126,4 +121,3 @@ def slider_markup(_, videoid, user_id, query, query_type, channel):
             ),
         ],
     ]
-    return buttons

@@ -152,7 +152,7 @@ class Call(PyTgCalls):
                 get = await app.get_chat_member(chat_id, userbot.id)
             except ChatAdminRequired:
                 raise AssistantErr(_["call_1"])
-            if get.status == "banned" or get.status == "kicked":
+            if get.status in ["banned", "kicked"]:
                 raise AssistantErr(
                     _["call_2"].format(userbot.username, userbot.id)
                 )
@@ -256,9 +256,8 @@ class Call(PyTgCalls):
             else:
                 loop = loop - 1
                 await set_loop(chat_id, loop)
-            if popped:
-                if config.AUTO_DOWNLOADS_CLEAR == str(True):
-                    await auto_clean(popped)
+            if popped and config.AUTO_DOWNLOADS_CLEAR == str(True):
+                await auto_clean(popped)
             if not check:
                 await _clear_(chat_id)
                 return await client.leave_group_call(chat_id)
@@ -316,10 +315,9 @@ class Call(PyTgCalls):
                         videoid,
                         mystic,
                         videoid=True,
-                        video=True
-                        if str(streamtype) == "video"
-                        else False,
+                        video=str(streamtype) == "video",
                     )
+
                 except:
                     return await mystic.edit_text(
                         _["call_9"], disable_web_page_preview=True

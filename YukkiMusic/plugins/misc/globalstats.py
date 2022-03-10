@@ -90,9 +90,8 @@ async def stats_global(
     for vidid, count in list_arranged.items():
         if vidid == "telegram":
             continue
-        else:
-            videoid = vidid
-            co = count
+        videoid = vidid
+        co = count
         break
     (
         title,
@@ -200,10 +199,7 @@ async def overall_stats(client, CallbackQuery, _):
     fetch_playlist = config.PLAYLIST_FETCH_LIMIT
     song = config.SONG_DOWNLOAD_DURATION
     play_duration = config.DURATION_LIMIT_MIN
-    if config.AUTO_LEAVING_ASSISTANT == str(True):
-        ass = "Yes"
-    else:
-        ass = "No"
+    ass = "Yes" if config.AUTO_LEAVING_ASSISTANT == str(True) else "No"
     cm = config.CLEANMODE_DELETE_MINS
     text = f"""**Bot's Stats and Information:**
 
@@ -326,8 +322,7 @@ async def top_ten_chats(client, CallbackQuery, _):
         msg += f"🔗`{title}` played {count} times on bot.\n\n"
     if limit == 0:
         return await mystic.edit(_["tops_2"], reply_markup=upl)
-    if limit <= 10:
-        limit = 10
+    limit = max(limit, 10)
     msg = _["tops_3"].format(limit, MUSIC_BOT_NAME) + msg
     med = InputMediaPhoto(media=config.GLOBAL_IMG_URL, caption=msg)
     try:
@@ -351,10 +346,7 @@ async def top_fif_stats(client, CallbackQuery, _):
     mystic = await CallbackQuery.edit_message_text(_["tops_7"])
     stats = await get_global_tops()
     tot = len(stats)
-    if tot > 10:
-        tracks = 10
-    else:
-        tracks = tot
+    tracks = min(tot, 10)
     queries = await get_queries()
     if not stats:
         return await mystic.edit(_["tops_2"], reply_markup=upl)
@@ -416,10 +408,7 @@ async def top_here(client, CallbackQuery, _):
     mystic = await CallbackQuery.edit_message_text(_["tops_6"])
     stats = await get_particulars(chat_id)
     tot = len(stats)
-    if tot > 10:
-        tracks = 10
-    else:
-        tracks = tot
+    tracks = min(tot, 10)
     if not stats:
         return await mystic.edit(_["tops_2"], reply_markup=upl)
     msg = ""
