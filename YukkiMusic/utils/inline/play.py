@@ -80,7 +80,7 @@ def playlist_markup(_, videoid, user_id, ptype, channel):
         ],
     ]
     return buttons
-    
+
 
 def livestream_markup(_, videoid, user_id, mode, channel):
     buttons = [
