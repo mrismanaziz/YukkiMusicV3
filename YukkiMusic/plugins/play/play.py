@@ -122,6 +122,7 @@ async def play_commnd(
                     else _["general_3"].format(ex_type)
                 )
                 return await mystic.edit_text(err)
+            return await mystic.delete()
         else:
             return await mystic.edit_text(_["tg_2"])
     elif video_telegram:
@@ -166,6 +167,7 @@ async def play_commnd(
                     else _["general_3"].format(ex_type)
                 )
                 return await mystic.edit_text(err)
+            return await mystic.delete()
         else:
             return await mystic.edit_text(_["tg_2"])
     elif url:
@@ -315,6 +317,7 @@ async def play_commnd(
                     else _["general_3"].format(ex_type)
                 )
                 return await mystic.edit_text(err)
+            return await mystic.delete()
         else:
             return await mystic.edit_text(_["play_14"])
     else:
@@ -496,6 +499,7 @@ async def play_music(client, CallbackQuery, _):
             else _["general_3"].format(ex_type)
         )
         return await mystic.edit_text(err)
+    return await mystic.delete()
 
 
 @app.on_callback_query(
