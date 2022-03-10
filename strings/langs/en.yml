@@ -144,7 +144,7 @@ play_7 : "Sorry! Bot only allows limited number of video calls due to CPU overlo
 play_8 : "Not A Valid Video File Extension!\n\n**Supported Formats:** {0}"
 play_9 : "Video File Size Should Be Less Than 1 GiB"
 play_10 : "**Youtube Playlist Feature**\n\nSelect the Mode in which you want to play whole Youtube Playlist"
-play_11 : "🏷 Title: **{0}\n\n⏱ Duration:** {1} Mins"
+play_11 : "🏷 **Title:** `{0}`\n⏱ **Duration:** {1} Mins"
 play_12 : "**Spotify Play Mode**\n\nRequested By:- {0}"
 play_13 : "**Apple Playlists**\n\nRequested By:- {0}"
 play_14 : "**Unable to verify the URL.**\nBot wonders if this url belongs to any of the following platforms: Youtube, AppleMusic, Spotify, Resso and Soundcloud.\n\nYou can use /stream for M3u8 or Remote Links."
@@ -218,7 +218,7 @@ queue_3 : "<u>**Queued Tracks:</u>**  [Checkout More Queued Tracks From Here]({0
 queue_4 : "⏳ Added to Queue at **#{0}\n\n🏷 Title:** {1}\n**⏱ Duration:** {2}\n🎧 **Requested By:** {3}"
 
 # All Streaming Lines
-stream_1 : "📡 **Started Streaming**\n\n🎧 **Requested By:** {0}\n💡 **Information: **[Here]({1})"
+stream_1 : "📡 **Started Streaming**\n\n💡 **Information: **[Here]({1})\n🎧 **Requested By:** {0}"
 stream_2 : "📡 **Started Streaming via URL**\n\n🎧 **Requested By:** {0}"
 stream_3 : "📡 **Started Streaming**\n\n**🏷 Title:** {0}\n⏱ **Duration**: {1}\n🎧 **Requested By:** {2}"
 stream_4 : "📡 **Started Streaming**\n\n**🏷 Title:** [{0}]({1})\n⏱ **Duration**: {2}\n🎧 **Requested By:** {3}"
