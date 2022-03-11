@@ -82,7 +82,7 @@ USAGE_COMMAND : ["usage", "यूसेज"]
 
 #Basic Bot Commands
 UPDATE_COMMAND : ["update", "अपडेट"]
-RESTART_COMMAND : ["restart", "रीस्टार्ट"]
+RESTART_COMMAND : ["mrestart", "रीस्टार्ट"]
 
 #Private Bot Mode
 AUTHORIZE_COMMAND : ["authorize", "ऑथॉरिजे"]
@@ -102,6 +102,6 @@ ACTIVEVC_COMMAND : ["activevoice", "एक्टीवेवोईस"]
 ACTIVEVIDEO_COMMAND : ["activevideo", "एक्टीवेविडो"]
 
 #Gban Commands
-GBAN_COMMAND : ["gban"]
-UNGBAN_COMMAND : ["ungban"]
+GBAN_COMMAND : ["mgban"]
+UNGBAN_COMMAND : ["mungban"]
 GBANNED_COMMAND : ["gbannedusers"]
