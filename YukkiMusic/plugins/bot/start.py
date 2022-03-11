@@ -240,12 +240,6 @@ async def welcome(client, message: Message):
                         config.MUSIC_BOT_NAME, member.mention
                     )
                 )
-            if member.id in SUDOERS:
-                return await message.reply_text(
-                    _["start_5"].format(
-                        config.MUSIC_BOT_NAME, member.mention
-                    )
-                )
             return
         except:
             return
