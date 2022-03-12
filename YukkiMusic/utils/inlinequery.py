@@ -56,11 +56,5 @@ answer.extend(
             thumb_url="https://telegra.ph/file/7f6aac5c6e27d41a4a269.png",
             input_message_content=InputTextMessageContent("/shuffle"),
         ),
-        InlineQueryResultArticle(
-            title="Loop Stream",
-            description="Loop the current playing music. | Usage: /loop [enable|disable]",
-            thumb_url="https://telegra.ph/file/081c20ce2074ea3e9b952.png",
-            input_message_content=InputTextMessageContent("/loop 3"),
-        ),
     ]
 )
