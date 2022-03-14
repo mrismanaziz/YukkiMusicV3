@@ -215,12 +215,12 @@ song_11 : "Memulai MengUpload\n\nKecepatan upload bisa lambat. Mohon tunggu sebe
 queue_1 : "`Tunggu Sebentar...`"
 queue_2 : "Tidak ada trek di dalam Antrian."
 queue_3 : "<u>**Jalur Antrian:</u>**  [Lihat Trek Antrian Lainnya Dari Sini]({0})"
-queue_4 : "💡 **Ditambahkan Ke antrian »** `#{0}`\n\n🏷 Judul:** {1}\n**⏱ Durasi:** {2}\n🎧 *Atas permintaan:** {3}"
+queue_4 : "💡 **Ditambahkan Ke antrian »** `#{0}`\n\n🏷 **Judul:** `{1}`\n**⏱ Durasi:** {2}\n🎧 **Atas permintaan:** {3}"
 
 # All Streaming Lines
-stream_1 : "📡 **Memulai Streaming**\n\n💡 **Information: **[Disini]({1})\n🎧 **Atas permintaan:** {0}"
-stream_2 : "📡 **Memulai Streaming via URL**\n\n🎧 **Requested By:** {0}"
-stream_3 : "📡 **Memulai Streaming**\n\n**🏷 Judul:** {0}\n⏱ **Durasi**: {1}\n🎧 **Atas permintaan:** {2}"
+stream_1 : "📡 **Started Streaming**\n\n💡 **Information: **[Here]({1})\n🎧 **Requested By:** {0}"
+stream_2 : "📡 **Memulai Streaming via URL**\n\n🎧 **Atas permintaan:** {0}"
+stream_3 : "📡 **Memulai Streaming**\n\n**🏷 Judul:** `{0}`\n⏱ **Durasi**: {1}\n🎧 **Atas permintaan:** {2}"
 stream_4 : "📡 **Memulai Streaming**\n\n**🏷 Judul:** [{0}]({1})\n⏱ **Durasi**: {2}\n🎧 **Atas permintaan:** {3}"
 
 # Inline Buttons
