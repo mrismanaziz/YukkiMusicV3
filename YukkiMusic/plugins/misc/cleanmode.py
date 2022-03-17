@@ -236,24 +236,6 @@ async def auto_clean():
         except:
             pass
         try:
-            for chat_id in clean:
-                if chat_id == config.LOG_GROUP_ID:
-                    continue
-                for x in clean[chat_id]:
-                    if datetime.now() > x["timer_after"]:
-                        try:
-                            await app.delete_messages(
-                                chat_id, x["msg_id"]
-                            )
-                        except FloodWait as e:
-                            await asyncio.sleep(e.x)
-                        except:
-                            pass
-                    else:
-                        continue
-        except:
-            pass
-        try:
             served_chats = await get_active_chats()
             for chat_id in served_chats:
                 if chat_id not in adminlist:
