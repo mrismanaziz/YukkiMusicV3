@@ -31,7 +31,7 @@ auth_2 : "Berhasil Menambahkan ke Authorised Users."
 auth_3 : "Sudah ada di daftar Authorised Users."
 auth_4 : "Berhasil Menghapus dari daftar Authorised Users."
 auth_5 : "Pengguna tidak ada di daftar Authorised User."
-auth_6 : "`Tunggu Sebentar...`"
+auth_6 : "Tunggu Sebentar..."
 auth_7 : "**Authorised Users List:**\n\n"
 auth_8 : "┗ Ditambahkan oleh:"
 
@@ -155,7 +155,7 @@ play_18 : "**Obrolan Suara Tidak Aktif**\n\nUntuk menggunakan force play, harus 
 
 #Playlist
 playlist_1 : "**Lagu tidak ditemukan.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
-playlist_2 : "`Tunggu Sebentar...`"
+playlist_2 : "Tunggu Sebentar..."
 playlist_3 : "Anda tidak memiliki daftar putar di Server Bot."
 playlist_4 : "Daftar Putar yang Diambil:\n\n"
 playlist_5 :  "    Durasi {0} Menit"
@@ -190,7 +190,7 @@ tracks_2 : "**Error**\n\nThere's no **{0} Top 10 Playlist** on bot's servers. Pl
 
 #Lyrics
 lyrics_1 : "**Gunakan:** `/lyrics` [ Judul Lagu ]"
-lyrics_2 : "`Sedang Mencari Lyrics`"
+lyrics_2 : "Sedang Mencari Lyrics"
 lyrics_3 : "❌ **Gagal mengambil lirik.**\n\n💡 **Mencoba Mencari:** `{0}`"
 lyrics_4 : "Klik tombol di bawah ini dan dapatkan lirik yang dicari untuk menghindari pencarian lirik jenis spam yang panjang."
 
@@ -204,7 +204,7 @@ song_2 : "**Gunakan Perintah:** `/song` [Judul Lagu] atau [Link Youtube]"
 song_3 : "Link Live Streaming Terdeteksi. Saya tidak dapat mendownload video Live Streaming."
 song_4 : "**🏷 Judul:** {0}\n\nPilih jenis yang ingin anda Download."
 song_5 : "Link Youtube yang anda berikan tidak valid"
-song_6 : "`Tunggu Sebentar...`"
+song_6 : "Tunggu Sebentar..."
 song_7 : "Gagal mendapatkan format yang tersedia untuk video. Silakan coba trek lain."
 song_8 : "Memulai Mendownload\n\nKecepatan pengunduhan mungkin lambat. Mohon tunggu sebentar..."
 song_9 : "**Gagal mendownload lagu dari Youtube-DL**\n\n**Karena:** {0}"
@@ -212,7 +212,7 @@ song_10 : "Gagal mengupload file di telegram dari server."
 song_11 : "Memulai MengUpload\n\nKecepatan upload bisa lambat. Mohon tunggu sebentar..."
 
 # Tools - Queue
-queue_1 : "`Tunggu Sebentar...`"
+queue_1 : "Tunggu Sebentar..."
 queue_2 : "Tidak ada trek di dalam Antrian."
 queue_3 : "<u>**Jalur Antrian:</u>**  [Lihat Trek Antrian Lainnya Dari Sini]({0})"
 queue_4 : "💡 **Ditambahkan Ke antrian »** `#{0}`\n\n🏷 **Judul:** `{1}`\n**⏱ Durasi:** {2}\n🎧 **Atas permintaan:** {3}"
@@ -305,9 +305,9 @@ ST_B_25 : "🫂 Play Type"
 ST_B_26 : "🗑 Command Clean"
 
 #Song
-SG_B_1 : "↗️ Open Private Chat"
-SG_B_2 : "🔊 Audio"
-SG_B_3 : "🎥 Video"
+SG_B_1 : "💌 ᴏᴘᴇɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+SG_B_2 : "🔊 ᴀᴜᴅɪᴏ"
+SG_B_3 : "🎥 ᴠɪᴅᴇᴏ"
 
 #Stats
 SA_B_1 : "📢 ᴛᴏᴘ 10 ᴄʜᴀᴛ"
