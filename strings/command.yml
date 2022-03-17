@@ -21,7 +21,7 @@ STATS_COMMAND : ["mstats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs"]
 
 # Play Commands
-PLAY_COMMAND : ["play", "vplay", "cplay", "playforce", "vplayforce", "cplayforce"]
+PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
 STREAM_COMMAND : ["stream", "cstream", "streamforce"]
@@ -31,7 +31,7 @@ PLAYLIST_COMMAND : ["playlistuser"]
 DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 # Tools
-QUEUE_COMMAND : ["queue", "playlist", "cqueue"]
+QUEUE_COMMAND : ["queue", "cqueue", "playlist", "player", "cplayer", "playing", "cplaying"]
 SONG_COMMAND : ["song", "video"]
 LYRICS_COMMAND : ["lyrics"]
 
@@ -47,7 +47,8 @@ STOP_COMMAND : ["stop", "end", "cstop", "cend"]
 SKIP_COMMAND : ["skip", "cskip"]
 SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
 LOOP_COMMAND : ["loop", "cloop"]
-
+SEEK_COMMAND : ["seek", "cseek", "seekback", "cseekback"]
+RESTART_COMMAND : ["restart"]
 
 # Sudo Users Commaands
 
@@ -82,7 +83,7 @@ VARS_COMMAND : ["vars", "config"]
 
 #Basic Bot Commands
 UPDATE_COMMAND : ["update"]
-RESTART_COMMAND : ["mrestart"]
+REBOOT_COMMAND : ["reboot"]
 
 #Private Bot Mode
 AUTHORIZE_COMMAND : ["authorize"]
