@@ -26,14 +26,14 @@ call_10 : "Mendownload Lagu Berikutnya dari Daftar Putar"
 call_11 : "Silahkan Tambahkan @{0} Ke Channel [ ID: `{1}`].\n\nBot tidak bisa mendapatkan detail channel."
 
 # PLUGINS - Auth.py
-auth_1 : "Anda hanya dapat menambahkan 20 Authorised Users di grup Anda (AUL)"
+auth_1 : "Anda hanya dapat menambahkan 20 Authorised Users di grup Anda"
 auth_2 : "Berhasil Menambahkan ke Authorised Users."
 auth_3 : "Sudah ada di daftar Authorised Users."
 auth_4 : "Berhasil Menghapus dari daftar Authorised Users."
 auth_5 : "Pengguna tidak ada di daftar Authorised User."
 auth_6 : "`Tunggu Sebentar...`"
-auth_7 : "**Authorised Users List [AUL]:**\n\n"
-auth_8 : "┗ **Ditambahkan oleh:**"
+auth_7 : "**Authorised Users List:**\n\n"
+auth_8 : "┗ Ditambahkan oleh:"
 
 # PLUGINS - Admins
 admin_1 : "Musik sudah Dijeda."
