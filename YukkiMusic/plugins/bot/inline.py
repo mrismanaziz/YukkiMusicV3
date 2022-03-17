@@ -47,24 +47,24 @@ async def inline_query_handler(client, query):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch on Youtube",
+                            text="🎥 ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ",
                             url=link,
                         )
                     ],
                 ]
             )
             searched_text = f"""
-❇️**Title:** [{title}]({link})
+❇️ **Title:** `[{title}]({link})`
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
+⏱ **Duration:** {duration} Mins
+👀 **Views:** `{views}`
+⏰ **Published Time:** {published}
+🎥 **Channel Name:** {channel}
+📎 **Channel Link:** [Visit From Here]({channellink})
 
-__Reply with /play on this searched message to stream it on voice chat.__
+Reply with /play on this searched message to stream it on voice chat.
 
-⚡️ ** Inline Search By {MUSIC_BOT_NAME} **"""
+⚡️ **Inline Search By** {MUSIC_BOT_NAME}"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,

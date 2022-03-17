@@ -149,29 +149,28 @@ async def start_comm(client, message: Message, _):
             searched_text = f"""
 🔍__**Video Track Information**__
 
-❇️**Title:** {title}
+❇️ **Title:** `{title}`
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏱ **Duration:** {duration} Mins
+👀 **Views:** `{views}`
+⏰ **Published Time:** {published}
+🎥 **Channel Name:** {channel}
+📎 **Channel Link:** [Visit From Here]({channellink})
+🔗 **Video Link:** [Link]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+⚡️ **Searched Powered By** {config.MUSIC_BOT_NAME}"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch ", url=f"{link}"
+                            text="• ᴡᴀᴛᴄʜ •", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="• ᴄʟᴏsᴇ •", callback_data="close"
                         ),
                     ],
                 ]
             )
-            await m.delete()
             await app.send_photo(
                 message.chat.id,
                 photo=thumbnail,
@@ -192,26 +191,6 @@ async def start_comm(client, message: Message, _):
             OWNER = OWNER_ID[0]
         except:
             OWNER = None
-        out = private_panel(_, app.username, OWNER)
-        if config.START_IMG_URL:
-            try:
-                await message.reply_photo(
-                    photo=config.START_IMG_URL,
-                    caption=_["start_2"].format(
-                        config.MUSIC_BOT_NAME
-                    ),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-            except:
-                await message.reply_text(
-                    _["start_2"].format(config.MUSIC_BOT_NAME),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
-        else:
-            await message.reply_text(
-                _["start_2"].format(config.MUSIC_BOT_NAME),
-                reply_markup=InlineKeyboardMarkup(out),
-            )
         if await is_on_off(config.LOG):
             sender_id = message.from_user.id
             sender_name = message.from_user.first_name
@@ -281,12 +260,6 @@ async def welcome(client, message: Message):
             if member.id in config.OWNER_ID:
                 return await message.reply_text(
                     _["start_4"].format(
-                        config.MUSIC_BOT_NAME, member.mention
-                    )
-                )
-            if member.id in SUDOERS:
-                return await message.reply_text(
-                    _["start_5"].format(
                         config.MUSIC_BOT_NAME, member.mention
                     )
                 )

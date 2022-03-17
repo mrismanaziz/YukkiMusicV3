@@ -56,17 +56,5 @@ answer.extend(
             thumb_url="https://telegra.ph/file/7f6aac5c6e27d41a4a269.png",
             input_message_content=InputTextMessageContent("/shuffle"),
         ),
-        InlineQueryResultArticle(
-            title="Seek Stream",
-            description="Seek the ongoing stream to a specific duration.",
-            thumb_url="https://telegra.ph/file/cd25ec6f046aa8003cfee.png",
-            input_message_content=InputTextMessageContent("/seek 10"),
-        ),
-        InlineQueryResultArticle(
-            title="Loop Stream",
-            description="Loop the current playing music. | Usage: /loop [enable|disable]",
-            thumb_url="https://telegra.ph/file/081c20ce2074ea3e9b952.png",
-            input_message_content=InputTextMessageContent("/loop 3"),
-        ),
     ]
 )

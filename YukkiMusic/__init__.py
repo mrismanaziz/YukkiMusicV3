@@ -18,9 +18,6 @@ from .logging import LOGGER
 # Directories
 dirr()
 
-# Check Git Updates
-git()
-
 # Initialize Memory DB
 dbb()
 
