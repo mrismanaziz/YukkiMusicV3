@@ -136,7 +136,10 @@ def video_quality_markup(
 
 
 def cleanmode_settings_markup(
-    _, status: Union[bool, str] = None, dels: Union[bool, str] = None
+    _,
+    status: Union[bool, str] = None,
+    dels: Union[bool, str] = None,
+    sug: Union[bool, str] = None,
 ):
     buttons = [
         [
@@ -155,6 +158,15 @@ def cleanmode_settings_markup(
             InlineKeyboardButton(
                 text=_["ST_B_14"] if dels == True else _["ST_B_15"],
                 callback_data="COMMANDELMODE",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["ST_B_27"], callback_data="SUGGANSWER"
+            ),
+            InlineKeyboardButton(
+                text=_["ST_B_14"] if sug == True else _["ST_B_15"],
+                callback_data="SUGGESTIONCHANGE",
             ),
         ],
         [

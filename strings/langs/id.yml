@@ -26,14 +26,14 @@ call_10 : "Mendownload Lagu Berikutnya dari Daftar Putar"
 call_11 : "Silahkan Tambahkan @{0} Ke Channel [ ID: `{1}`].\n\nBot tidak bisa mendapatkan detail channel."
 
 # PLUGINS - Auth.py
-auth_1 : "Anda hanya dapat menambahkan 20 Authorised Users di grup Anda (AUL)"
+auth_1 : "Anda hanya dapat menambahkan 20 Authorised Users di grup Anda"
 auth_2 : "Berhasil Menambahkan ke Authorised Users."
 auth_3 : "Sudah ada di daftar Authorised Users."
 auth_4 : "Berhasil Menghapus dari daftar Authorised Users."
 auth_5 : "Pengguna tidak ada di daftar Authorised User."
-auth_6 : "`Tunggu Sebentar...`"
-auth_7 : "**Authorised Users List [AUL]:**\n\n"
-auth_8 : "┗ **Ditambahkan oleh:**"
+auth_6 : "Tunggu Sebentar..."
+auth_7 : "**Authorised Users List:**\n\n"
+auth_8 : "┗ Ditambahkan oleh:"
 
 # PLUGINS - Admins
 admin_1 : "Musik sudah Dijeda."
@@ -82,15 +82,16 @@ help_2 : "**Hubungi saya di PM untuk bantuan.**"
 # Settings
 setting_1 : "⚙️ **Music Bot Settings**\n\n🖇 **Group:** {0}\n🔖 **Group ID:** `{1}`\n\n💡 **Pilih button dari bawah yang ingin Anda edit atau ubah.**"
 setting_3 : "⁉️ Apa ini?\n\n1. Direct: Memutar Lagu secara langsung. Gunakan -v untuk memutar video dalam mode direct.\n\n2. Inline: Memutar Lagu Dengan Menampilkan Button untuk memilih antara video atau audio."
-setting_4 : "⁉️ Apa ini?\n\n👥 Everyone: Siapa pun dapat menggunakan perintah admin (skip, pause, resume dll)  yang ada di grup ini.\n\n🙍 Admin Only: Hanya admin dan Authorised Users yang dapat menggunakan perintah admin."
+setting_4 : "⁉️ Apa ini?\n\n👥 Everyone: Siapa pun dapat menggunakan perintah admin di grup ini.\n\n🙍 Admin Only: Hanya admin dan Authorised Users yang dapat menggunakan perintah admin."
 setting_5 : "Tidak Ada Authorised Users yang Ditemukan\n\nAnda dapat mengizinkan member menggunakan perintah admin dengan perintah /auth dan menghapus dengan menggunakan /unauth"
 setting_9 : "⁉️ Apa ini?\n\nSaat diaktifkan, Bot akan menghapus pesannya setelah {0} untuk membuat obrolan anda bersih."
 setting_10 : "⁉️ Apa ini?\n\n1. Group: Memutar musik di grup tempat perintah diberikan.\n\n2. Channel: Memutar musik di channel yang Anda inginkan. Setel id channel melalui /channelplay"
 setting_11 : "⁉️ Apa ini?\n\n1. Everyone: Siapa pun yang ada dalam grup ini dapat memutar musik di sini.\n\n2. Admin Only: Hanya admin yang dapat memutar musik di grup ini."
 setting_12 : "❌ Anda tidak memiliki id channel yang ditentukan untuk mode channel. Tolong settings dengan /channelplay"
 setting_13 : "Tidak dapat mengubah play mode dalam obrolan suara grup yang sedang aktif. Tolong hentikan obrolan suara terlebih dahulu dengan perintah /stop"
-setting_14 : "⁉️ Apa ini?\n\nSaat diaktifkan, Bot akan menghapus perintah yang diberikan seperti [ /play, /pause, /shuffle, /stop dll) .\n\nBot membutuhkan hak admin hapus pesan agar ini berfungsi dengan baik."
+setting_14 : "⁉️ Apa ini?\n\nSaat diaktifkan, Bot akan menghapus perintah seperti [ /play, /pause, /shuffle, /stop dll)\n\nBot membutuhkan hak admin hapus pesan agar ini berfungsi dengan baik."
 setting_15 : "Gagal menyelesaikan peer, Pastikan Anda telah menambahkan bot di channel Anda dan mempromosikannya sebagai admin.\n\nCoba Settings /channelplay lagi."
+setting_16 : "⁉️ Apa ini?\n\nSaat diaktifkan, Bot akan menyarankan obrolan Anda setiap 1-2 jam tentang perintah bot secara acak."
 
 set_cb_1 : "Getting Audio Quality Panel..."
 set_cb_2 : "Getting Video Quality Panel..."
@@ -155,7 +156,7 @@ play_18 : "**Obrolan Suara Tidak Aktif**\n\nUntuk menggunakan force play, harus 
 
 #Playlist
 playlist_1 : "**Lagu tidak ditemukan.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
-playlist_2 : "`Tunggu Sebentar...`"
+playlist_2 : "Tunggu Sebentar..."
 playlist_3 : "Anda tidak memiliki daftar putar di Server Bot."
 playlist_4 : "Daftar Putar yang Diambil:\n\n"
 playlist_5 :  "    Durasi {0} Menit"
@@ -190,7 +191,7 @@ tracks_2 : "**Error**\n\nThere's no **{0} Top 10 Playlist** on bot's servers. Pl
 
 #Lyrics
 lyrics_1 : "**Gunakan:** `/lyrics` [ Judul Lagu ]"
-lyrics_2 : "`Sedang Mencari Lyrics`"
+lyrics_2 : "Sedang Mencari Lyrics"
 lyrics_3 : "❌ **Gagal mengambil lirik.**\n\n💡 **Mencoba Mencari:** `{0}`"
 lyrics_4 : "Klik tombol di bawah ini dan dapatkan lirik yang dicari untuk menghindari pencarian lirik jenis spam yang panjang."
 
@@ -204,7 +205,7 @@ song_2 : "**Gunakan Perintah:** `/song` [Judul Lagu] atau [Link Youtube]"
 song_3 : "Link Live Streaming Terdeteksi. Saya tidak dapat mendownload video Live Streaming."
 song_4 : "**🏷 Judul:** {0}\n\nPilih jenis yang ingin anda Download."
 song_5 : "Link Youtube yang anda berikan tidak valid"
-song_6 : "`Tunggu Sebentar...`"
+song_6 : "Tunggu Sebentar..."
 song_7 : "Gagal mendapatkan format yang tersedia untuk video. Silakan coba trek lain."
 song_8 : "Memulai Mendownload\n\nKecepatan pengunduhan mungkin lambat. Mohon tunggu sebentar..."
 song_9 : "**Gagal mendownload lagu dari Youtube-DL**\n\n**Karena:** {0}"
@@ -212,7 +213,7 @@ song_10 : "Gagal mengupload file di telegram dari server."
 song_11 : "Memulai MengUpload\n\nKecepatan upload bisa lambat. Mohon tunggu sebentar..."
 
 # Tools - Queue
-queue_1 : "`Tunggu Sebentar...`"
+queue_1 : "Tunggu Sebentar..."
 queue_2 : "Tidak ada trek di dalam Antrian."
 queue_3 : "<u>**Jalur Antrian:</u>**  [Lihat Trek Antrian Lainnya Dari Sini]({0})"
 queue_4 : "💡 **Ditambahkan Ke antrian »** `#{0}`\n\n🏷 **Judul:** `{1}`\n**⏱ Durasi:** {2}\n🎧 **Atas permintaan:** {3}"
@@ -237,8 +238,8 @@ L_B_1 : "🚀 ᴄʜᴇᴄᴋᴏᴜᴛ ʟʏʀɪᴄs ɴᴏᴡ"
 # Start
 S_B_1 : "🗒 ᴄᴏᴍᴍᴀɴᴅs"
 S_B_2 : "🔧 sᴇᴛᴛɪɴɢs"
-S_B_3 : "📨 sᴜᴘᴘᴏʀᴛ"
-S_B_4 : "📨 ᴄʜᴀɴɴᴇʟ"
+S_B_3 : "• sᴜᴘᴘᴏʀᴛ •"
+S_B_4 : "• ᴄʜᴀɴɴᴇʟ •"
 S_B_5 : "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ➕"
 S_B_6 : "💡 ɢɪᴛ ʀᴇᴘᴏ"
 S_B_7 : "👤 ᴏᴡɴᴇʀ ʙᴏᴛ"
@@ -303,11 +304,12 @@ ST_B_23 : "🏘 Group"
 ST_B_24 : "🏷 Channel"
 ST_B_25 : "🫂 Play Type"
 ST_B_26 : "🗑 Command Clean"
+ST_B_27 : "🧑‍🚀 Suggestion Mode"
 
 #Song
-SG_B_1 : "↗️ Open Private Chat"
-SG_B_2 : "🔊 Audio"
-SG_B_3 : "🎥 Video"
+SG_B_1 : "💌 ᴏᴘᴇɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+SG_B_2 : "🔊 ᴀᴜᴅɪᴏ"
+SG_B_3 : "🎥 ᴠɪᴅᴇᴏ"
 
 #Stats
 SA_B_1 : "📢 ᴛᴏᴘ 10 ᴄʜᴀᴛ"
@@ -318,6 +320,10 @@ SA_B_5 : "💡 ᴏᴠᴇʀᴀʟʟ sᴛᴀᴛs"
 SA_B_6 : "👤 ᴜsᴇʀ sᴛᴀᴛs"
 SA_B_7 : "🔢 ɢʟᴏʙᴀʟ ᴛᴏᴘ 10 sᴛᴀᴛs"
 SA_B_8 : "🤖 ʙᴏᴛ sᴛᴀᴛs"
+
+#Queue
+QU_B_1 : "📑 ᴅᴀꜰᴛᴀʀ ᴀɴᴛʀɪᴀɴ"
+QU_B_2 : "Dimainkan {0} dari {1} Menit"
 
 # Sudo Users [ If you are translating this to some other language .. you can leave all these strings in english language]
 

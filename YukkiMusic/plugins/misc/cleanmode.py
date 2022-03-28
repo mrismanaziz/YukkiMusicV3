@@ -47,6 +47,10 @@ async def clean_mode(client, update, users, chats):
             return
     except:
         return
+    if users:
+        return
+    if chats:
+        return
     message_id = update.max_id
     chat_id = int(f"-100{update.channel_id}")
     if not await is_cleanmode_on(chat_id):
@@ -230,25 +234,7 @@ async def auto_clean():
                             user_id, vidid, new_spot
                         )
         except:
-            pass
-        try:
-            for chat_id in clean:
-                if chat_id == config.LOG_GROUP_ID:
-                    continue
-                for x in clean[chat_id]:
-                    if datetime.now() > x["timer_after"]:
-                        try:
-                            await app.delete_messages(
-                                chat_id, x["msg_id"]
-                            )
-                        except FloodWait as e:
-                            await asyncio.sleep(e.x)
-                        except:
-                            pass
-                    else:
-                        continue
-        except:
-            pass
+            continue
         try:
             served_chats = await get_active_chats()
             for chat_id in served_chats:
@@ -265,7 +251,7 @@ async def auto_clean():
                         user_id = await alpha_to_int(user)
                         adminlist[chat_id].append(user_id)
         except:
-            pass
+            continue
 
 
 asyncio.create_task(auto_clean())

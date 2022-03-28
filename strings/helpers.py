@@ -18,6 +18,10 @@ HELP_1 = """✅**<u>Admin Commands:</u>**
 /skip or /cskip- Skip the current playing music.
 /stop or /cstop- Stop the playing music.
 /shuffle or /cshuffle- Randomly shuffles the queued playlist.
+/seek or /cseek - Forward Seek the music to your duration
+/seekback or /cseekback - Backward Seek the music to your duration
+/restart - Restart bot for your chat .
+
 
 ✅<u>**Specific Skip:**</u>
 /skip or /cskip [Number(example: 3)] 
@@ -68,7 +72,10 @@ HELP_3 = """✅<u>**Bot Commands:**</u>
 
 /song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
 
+/player -  Get a interactive Playing Panel.
+
 **c** stands for channel play.
+
 /queue or /cqueue- Check Queue List of Music."""
 
 HELP_4 = """✅<u>**Extra  Commands:**</u>
@@ -116,12 +123,13 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /set_var [Var Name] [Value] - Set a Var or Update a Var on heroku or .env. Seperate Var and its Value with a space.
 
 🤖**<u>BOT COMMANDS:</u>**
-/restart - Restart Bot. 
+/reboot - Reboot your Bot. 
 /update - Update Bot.
 /speedtest - Check server speeds
 /maintenance [enable / disable] 
 /logger [enable / disable] - Bot logs the searched queries in logger group.
 /get_log [Number of Lines] - Get log of your bot from heroku or vps. Works for both.
+/autoend [enable|disable] - Enable Auto stream end after 3 mins if no one is listening.
 
 📈**<u>STATS COMMANDS:</u>**
 /activevoice - Check active voice chats on bot.
