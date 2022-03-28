@@ -722,10 +722,6 @@ async def slider_queries(client, CallbackQuery, _):
             query_type = 0
         else:
             query_type = int(rtype + 1)
-        try:
-            await CallbackQuery.answer(_["playcb_2"])
-        except:
-            pass
         title, duration_min, thumbnail, vidid = await YouTube.slider(
             query, query_type
         )
@@ -747,10 +743,6 @@ async def slider_queries(client, CallbackQuery, _):
             query_type = 9
         else:
             query_type = int(rtype - 1)
-        try:
-            await CallbackQuery.answer(_["playcb_2"])
-        except:
-            pass
         title, duration_min, thumbnail, vidid = await YouTube.slider(
             query, query_type
         )

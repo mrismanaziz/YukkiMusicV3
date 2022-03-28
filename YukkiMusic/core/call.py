@@ -248,8 +248,6 @@ class Call(PyTgCalls):
                         )
                     await asyncio.sleep(3)
                     await userbot.join_chat(invitelink)
-                    await asyncio.sleep(4)
-                    await m.edit(_["call_6"].format(userbot.name))
                 except UserAlreadyParticipant:
                     pass
                 except Exception as e:
