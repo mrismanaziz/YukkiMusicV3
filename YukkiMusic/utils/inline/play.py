@@ -40,13 +40,8 @@ def stream_markup(_, videoid):
                 text=_["PL_B_3"], switch_inline_query_current_chat=""
             ),
             InlineKeyboardButton(
-                text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"
-            )
-        ],
-        [
-            InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
-            ),
+            )
         ],
     ]
     return buttons
@@ -58,11 +53,6 @@ def telegram_markup(_):
             InlineKeyboardButton(
                 text=_["PL_B_3"], switch_inline_query_current_chat=""
             ),
-            InlineKeyboardButton(
-                text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"
-            ),
-        ],
-        [
             InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"], callback_data="close"
             ),
